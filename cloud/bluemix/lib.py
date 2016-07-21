@@ -155,8 +155,6 @@ def run(name, ports, memory, envvars, links, volumes, image_id,
     if command:
         for component in command.strip().split():
             cmd.append(component.strip())
-    with open("/tmp/foo", "w") as f:
-        f.write(str(" ".join(cmd)))
     return check_output(cmd).strip()
 
 
